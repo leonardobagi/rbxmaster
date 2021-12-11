@@ -68,3 +68,4 @@ var promocodes = [
         link: "https://www.roblox.com/catalog/6971068380/White-Flamingo-Fedora"
     },
 ]
+export default promocodes;
