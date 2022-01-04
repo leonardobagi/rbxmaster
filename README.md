@@ -14,11 +14,11 @@ O RobloxPromocodeMaster é uma extensão feita por mim e [CarBluG Studio](https:
 - Firefox
 
 ## Como instalar a extensão?
-A extensão ainda não estará disponível na Chrome Web Store por alguns problemas técnicos. Para baixar a extensão, siga o tutorial
+A extensão ainda não estará disponível na Chrome Web Store por alguns problemas técnicos. Para baixar a extensão, siga o tutorial. (Também no Twitter por [LeaksEvents](https://twitter.com/LeaksEvents/status/1476390123516440576))
 
 - ### Baixe o código da extensão
 
-No topo da página, clique em "Código" e depois em "Baixar ZIP"
+No topo da página, clique em "Código" e depois em "Baixar ZIP". Ou caso você saiba o que está fazendo, clone o repositório.
 
 ![No topo da página, clique em "Código" e depois em "Baixar ZIP"](https://images2.imgbox.com/b0/28/DCv23UHU_o.png)
 
@@ -38,4 +38,8 @@ Vá para as configuraçoes de seu navegador e procure por "Extensões" ou algo p
 
 ![](https://images2.imgbox.com/e0/e7/ZPzR58bU_o.png)
 
-Ative o "Modo do Desenvolvedor"
+Ative o "Modo do Desenvolvedor" e clique em "Carregar sem compactação".
+
+Selecione a pasta que você salvou a extensão, e clique em "Selecionar pasta".
+
+**Pronto!** A extensão deve funcionar normalmente agora.
