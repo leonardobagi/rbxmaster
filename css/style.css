@@ -1,0 +1,88 @@
+li.li-item{
+    margin-left: 15px!important;
+    margin-top: 5px!important;
+}
+h5.titulo-promocode{
+    margin-top: 20px!important;
+    font-size: 18px!important;
+}
+#testarTodosPromocodes{
+    cursor: pointer;
+}
+#rpmLista{
+    cursor: pointer;
+}
+#rpmListaCabecalho{
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+#rpmListaCabecalho > div{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.cabecalho-left{
+    float: left;
+}
+.cabecalho-right{
+    float: right
+}
+#promocodesLista::-webkit-scrollbar{
+    background-color: rgb(80, 80, 80);
+}
+#promocodesLista::-webkit-scrollbar-thumb{
+    background-color: rgb(70, 70, 70);
+}
+#promocodesLista{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 400px;
+}
+div#rpmListaConteudo{  
+    border-radius: 10px;
+    width: 450px;
+    position: fixed;
+    z-index: 5417823;
+    margin-left: calc(100% - 510px);
+    background-color: rgb(60, 60, 60);
+
+}
+ul.promocodeLista:not(ul.promocodeLista:first-child){
+    margin-top: 20px;
+}
+ul.promocodeLista{
+    margin-left: 5px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+ul.promocodeLista > div#promocodeConteudo{
+    margin-top: 10px;
+    display: flex;
+    width: -webkit-fill-available;
+    flex-direction: column;
+    align-items: flex-start;
+}
+div#promocodeConteudo > li{
+    color: #bdbebe
+}
+li.nomePromocode{
+    font-weight: 600;
+    font-size: 16px;
+}
+li.codigoPromocode{
+    font-weight: 500;
+}
+
+
+.listaPromocodes.fechada{
+    opacity: 0;
+    transition: .2s;
+}
+.listaPromocodes.aberta{
+    opacity: 1;
+    transition: .5s;
+}

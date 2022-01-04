@@ -3,20 +3,26 @@
 
     "name": "Roblox Promocode Master",
     "description": "Melhore sua experiência com a página de promocodes no Roblox. Essa extensão adiciona uma página que mostra os promocodes ativos no momento.",
-    "version": "1.1",
+    "version": "2.0",
 
     "content_scripts": [
         {
-            "matches": ["https://*.roblox.com/promocodes/*"],
-            "js": ["main.js"],
-            "css": ["style.css"]
+            "matches": ["https://*.roblox.com/*"],
+            "js": ["js/promocodes.js", "js/listaPromocodes.js"],
+            "css": ["css/style.css"]
         }
     ],
 
-    "web_accessible_resources": [{ 
-        "resources": ["carregar.js"],
-        "matches": ["<all_urls>"]
-      }],
 
-    "permissions": ["scripting"]
+    "web_accessible_resources": [{
+        "resources": ["img/icone.svg", "img/promocodeNovo.svg"],
+        "matches": ["<all_urls>"]
+    }],
+      
+      "icons": {
+         "48": "img/48.png",
+         "128": "img/128.png"
+      },
+
+    "permissions": ["scripting", "activeTab", "tabs"]
 }
