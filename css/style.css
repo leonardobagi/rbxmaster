@@ -81,8 +81,10 @@ li.codigoPromocode{
 .listaPromocodes.fechada{
     opacity: 0;
     transition: .2s;
+    display: none;
 }
 .listaPromocodes.aberta{
     opacity: 1;
     transition: .5s;
+    display: block;
 }
