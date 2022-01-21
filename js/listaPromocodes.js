@@ -19,7 +19,6 @@ function waitForEl(selector) {
 }
 
 function jsonPromocodes(promocodes) {
-
     var promocodesDiv = document.createElement("div");
 
     var promocodesNovos = promocodes.filter(el => el.codigoNovo);
@@ -47,7 +46,8 @@ function jsonPromocodes(promocodes) {
 
         const codigoEl = document.createElement("li");
         codigoEl.innerHTML = codigo;
-        codigoEl.setAttribute("class", "codigoPromocode")
+        codigoEl.setAttribute("class", "codigoPromocode");
+        codigoEl.style.transform = "translateX(-30%)";
 
         const promocodesUl = document.createElement("ul");
         promocodesUl.id = codigo;
@@ -65,7 +65,7 @@ function jsonPromocodes(promocodes) {
         promocodesDiv.append(promocodesNovosEl);
 
         promocodes.splice(promocodes.indexOf(el), 1);
-    })
+    });
     for (i = 0; i < promocodes.length; i++) {
         const nome = promocodes[i].nome;
         const linkImagem = promocodes[i].imagem;
@@ -81,7 +81,7 @@ function jsonPromocodes(promocodes) {
 
         const codigoEl = document.createElement("li");
         codigoEl.innerHTML = codigo;
-        codigoEl.setAttribute("class", "codigoPromocode")
+        codigoEl.setAttribute("class", "codigoPromocode");
 
         const promocodesUl = document.createElement("ul");
         promocodesUl.id = codigo;
@@ -114,7 +114,8 @@ function jsonPromocodes(promocodes) {
 
     const cabecalho = document.createElement("div");
     cabecalho.id = "rpmListaCabecalho";
-    cabecalho.innerHTML = "<a class='cabecalho-left'>Promocodes Ativos</a><a class='cabecalho-right' href='https://roblox.com/promocodes'>Mais detalhes</a>";
+    cabecalho.innerHTML =
+        "<a class='cabecalho-left'>Promocodes Ativos</a><a class='cabecalho-right' href='https://roblox.com/promocodes'>Mais detalhes</a>";
     listaPromocodes.append(cabecalho);
 
     promocodesFormatados.id = "promocodesLista";
@@ -123,7 +124,6 @@ function jsonPromocodes(promocodes) {
     document.querySelector(".content").insertAdjacentHTML("beforebegin", listaPromocodes.outerHTML);
 
     var listaPromocodes = document.getElementById("rpmListaConteudo");
-
 
     if (document.body.getAttribute("class").includes("dark-theme")) {
         const imagem = document.createElement("img");
@@ -143,10 +143,10 @@ function jsonPromocodes(promocodes) {
     }
 
     document.querySelector("#rpmLista > img").addEventListener("click", () => {
-        if(listaPromocodes.className.includes("fechada")){
+        if (listaPromocodes.className.includes("fechada")) {
             listaPromocodes.className = "listaPromocodes aberta";
-        }else{
+        } else {
             listaPromocodes.className = "listaPromocodes fechada";
         }
-    })
+    });
 })();

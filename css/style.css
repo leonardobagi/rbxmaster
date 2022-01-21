@@ -46,7 +46,8 @@ div#rpmListaConteudo{
     width: 450px;
     position: fixed;
     z-index: 5417823;
-    margin-left: calc(100% - 510px);
+    float: right;
+    left: calc(100% - 510px);
     background-color: rgb(60, 60, 60);
 
 }
