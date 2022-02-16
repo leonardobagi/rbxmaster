@@ -11,7 +11,7 @@
             "js": [
                 "js/constant/listaPromocodes.js",
 
-                "js/promocodes/promocodes.js",
+                "js/promocodes/promocodes.js"
             ],
             "css": ["css/style.css"],
             "run_at": "document_start"
