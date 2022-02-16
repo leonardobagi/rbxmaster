@@ -3,7 +3,7 @@
 
     "name": "RBXMaster",
     "description": "Melhore sua experiência com a página de promocodes no Roblox. Essa extensão adiciona uma página que mostra os promocodes ativos no momento.",
-    "version": "2.0.2",
+    "version": "2.1",
 
     "content_scripts": [
         {
@@ -11,34 +11,18 @@
             "js": [
                 "js/constant/listaPromocodes.js",
 
-                "js/games/badges.js",
-
-                "js/playlists/playlistItem.js",
-                "js/playlists/playlists.js",
-
                 "js/promocodes/promocodes.js",
-
-                "js/homepage.js",
-                "js/settings.js"
             ],
             "css": ["css/style.css"],
             "run_at": "document_start"
         }
     ],
-    "background":{
-        "service_worker": "js/background/background.js"
-    },
 
     "web_accessible_resources": [{
         "resources": [
             "img/icone.svg",
-            "img/loading.gif",
-            "img/playlistBarra.svg",
-            "img/playlistJogo.svg",
-            "img/promocodeNovo.svg",
 
-            "html/playlists.html",
-            "html/settings.html",
+            "img/promocodeNovo.svg",
 
             "js/util/func.js"
         ],
