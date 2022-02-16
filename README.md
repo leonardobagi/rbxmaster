@@ -38,4 +38,6 @@ Vá para as configuraçoes de seu navegador e procure por "Extensões" ou algo p
 
 ![](https://images2.imgbox.com/e0/e7/ZPzR58bU_o.png)
 
-Ative o "Modo do Desenvolvedor"
+Ative o "Modo do Desenvolvedor", clique em "Carregar sem compactação" e selecione a pasta em que você descompactou a extensão.
+
+Pronto! A extensão deve funcionar normalmente
