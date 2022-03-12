@@ -1,0 +1,67 @@
+{
+    "manifest_version": 3,
+
+    "name": "RBXMaster",
+    "description": "Melhore sua experiência com a página de promocodes no Roblox. Essa extensão adiciona uma página que mostra os promocodes ativos no momento.",
+    "version": "2.1",
+
+    "content_scripts": [
+        {
+            "matches": ["https://*.roblox.com/*"],
+            "js": [
+                "js/constant/listaPromocodes.js",
+
+                "js/games/badges.js",
+
+                "js/playlists/addToPlaylist.js",
+                "js/playlists/playlistItem.js",
+                "js/playlists/playlists.js",
+
+                "js/promocodes/promocodes.js",
+
+                "js/homepage.js",
+                "js/settings.js"
+            ],
+            "css": ["css/style.css"],
+            "run_at": "document_start"
+        }
+    ],
+    "background":{
+        "service_worker": "js/background/background.js"
+    },
+
+    "web_accessible_resources": [{
+        "resources": [
+            "img/icone.svg",
+            "img/loading.gif",
+            "img/playlistBarra.svg",
+            "img/playlistJogo.svg",
+            "img/promocodeNovo.svg",
+
+            "html/playlists.html",
+            "html/settings.html",
+            "html/playlistsInfo.html",
+            "html/playlistsList.html",
+
+            "js/util/func.js",
+            "js/util/playlistsContainer.js"
+        ],
+        "matches": ["<all_urls>"]
+    }],
+      
+      "icons": {
+         "48": "img/48.png",
+         "128": "img/128.png"
+      },
+      "host_permissions": [
+        "https://www.roblox.com/*",
+        "https://web.roblox.com/*"
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'",
+        "sandbox": "sandbox allow-scripts; script-src 'self'; object-src 'self';"
+      },
+      
+
+      "permissions": ["scripting", "tabs", "storage", "cookies"]
+}

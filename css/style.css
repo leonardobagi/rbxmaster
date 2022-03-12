@@ -1,0 +1,343 @@
+li.li-item {
+    margin-left: 15px!important;
+    margin-top: 5px!important;
+}
+
+h5.titulo-promocode {
+    margin-top: 20px!important;
+    font-size: 18px!important;
+}
+
+#testarTodosPromocodes {
+    cursor: pointer;
+}
+
+#rpmLista {
+    cursor: pointer;
+}
+
+#rpmListaCabecalho {
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+#rpmListaCabecalho>div {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cabecalho-left {
+    float: left;
+}
+
+.cabecalho-right {
+    float: right
+}
+
+#promocodesLista::-webkit-scrollbar {
+    background-color: rgb(80, 80, 80);
+}
+
+#promocodesLista::-webkit-scrollbar-thumb {
+    background-color: rgb(70, 70, 70);
+}
+
+#promocodesLista {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 400px;
+}
+
+div#rpmListaConteudo {
+    border-radius: 10px;
+    width: 450px;
+    position: fixed;
+    z-index: 5417823;
+    float: right;
+    left: calc(100% - 510px);
+    background-color: rgb(60, 60, 60);
+}
+
+ul.promocodeLista:not(ul.promocodeLista:first-child) {
+    margin-top: 20px;
+}
+
+ul.promocodeLista {
+    margin-left: 5px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+ul.promocodeLista>div#promocodeConteudo {
+    margin-top: 10px;
+    display: flex;
+    width: -webkit-fill-available;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+div#promocodeConteudo>li {
+    color: #bdbebe
+}
+
+li.nomePromocode {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+li.codigoPromocode {
+    font-weight: 500;
+}
+
+.listaPromocodes.fechada {
+    opacity: 0;
+    transition: .2s;
+    display: none;
+}
+
+.listaPromocodes.aberta {
+    opacity: 1;
+    transition: .5s;
+    display: block;
+}
+
+div.rbxm-settings-container {
+    margin-left: 12px;
+    float: left;
+    width: calc(100% - 176px);
+    margin-top: 6px;
+}
+.rbxm-settings-input{
+    margin-left: 20px;
+}
+
+.rbxm-configuracao:not(:first-child){
+    margin-top: 30px;
+}
+
+#salvar-configuracoes, #adicionar, #criarPlaylist, #salvarPlaylist, #atualizarPlaylist{
+    border: none;
+    background-color: rgb(70, 70, 70);
+    margin-top: 70px;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    transition: .2s;
+}
+#salvar-configuracoes:hover, #adicionar:hover, #criarPlaylist:hover, #salvarPlaylist:hover, #atualizarPlaylist:hover{
+    background-color: rgb(90, 90, 90);
+    transition: .2s;
+}
+.rbxm-contador-badges{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.rbxm-contador-badges > p{
+    color: rgb(240, 240, 240)!important;
+    margin-bottom: 30px;
+}
+.rbxm-badges-progresso{
+    width: 100%;   
+    background-color: rgb(60, 60, 60);
+    margin-bottom: 30px;
+    height: 40px;
+    border-radius: 100px;
+}
+.rbxm-badges-progresso > div{
+    width: 0%;
+    border-radius: inherit;
+    height: inherit;
+    text-align: center;
+    line-height: 40px!important;
+    background-color: rgb(80, 80, 80);
+}
+
+.voltar {
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.titulo {
+    text-align: center;
+}
+
+#listas > li > div{
+    display: flex;
+    flex-direction: row;
+}
+img#carregando{
+    margin: auto;
+    display: flex;
+}
+
+.rbxm-list-img{
+    width: 128px;
+    height: 128px;
+}
+
+.rbxm-list-game {
+    width: 164px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#listas > li {
+    margin-top: 10px;
+}
+
+span.rbxm-list-game-name {
+    margin-top: 10px;
+}
+
+form#addPlaylist, form#editarPlaylist {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
+    /* color: white; */
+}
+input#nomePlaylist, input#descricaoPlaylist, input#novoNomePlaylist, input#novaDescricaoPlaylist {
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 300px;
+    margin-top: 7px;
+}
+.addPlaylist, .editarPlaylistContainer, .rbxm-playlists-list {
+    position: fixed;
+    background-color: #232527;
+    z-index: 1042;
+    top: 100px;
+    display: flex;
+    height: calc(100% - 350px);
+    width: calc(100% - 900px);
+    left: 33%;
+    flex-direction: column;
+    border-radius: 15px;
+    justify-content: space-evenly;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.rbxm-playlists-list::-webkit-scrollbar{
+    background-color: inherit;
+}
+
+.rbxm-playlists-list::-webkit-scrollbar-thumb{
+    background-color: rgb(50, 50, 50);
+}
+
+.addPlaylist > p, .editarPlaylistContainer > p, .rbxm-playlists-list > p{
+    display: flex;
+    margin-right: 15px;
+    justify-content: end;
+    font-size: 18px;
+    cursor: pointer;
+}
+#addPlaylist, #editarPlaylist{
+    align-items: center;
+    transform: translateY(-18px);
+}
+
+.editarPlaylist {
+    float: right;
+    font-size: 18px;
+}
+
+.rbxm-playlist-games-specific {
+    display: inline-flex;
+    max-width: 100%;
+    max-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.nomePlaylist{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.playlistInfo > h4{
+    cursor: pointer;
+}
+
+.playlistInfo > p:first-of-type{
+    margin-bottom: 20px;
+}
+
+#playlistsLista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#atualizarPlaylist {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.playlistsSemJogo, .playlistsComJogo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playlist {
+    height: 50px;
+    display: flex;
+    background-color: rgb(70, 70, 70);
+    width: 70%;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#playlistsLista > select {
+    background-color: rgb(80, 80, 80);
+    border: none;
+    width: 80%;
+    display: flex;
+    border-radius: 15px;
+    text-align: center;
+    height: 30px;
+    align-self: center;
+}
+
+#playlistsLista:after {
+    content: "v";
+    /* display: flex; */
+    /* justify-content: end; */
+    top: 40.5%;
+    left: 85%;
+    width: 98%;
+    position: absolute;
+    /* float: right; */
+}
+
+.rbxm-playlists-list.active, .simplemodal-overlay3.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1042;
+    transition: .4s ease-in-out all;
+}
+
+.rbxm-playlists-list, .simplemodal-overlay3 {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -10;
+    transition: .2s ease-in-out all;
+}
+
+.simplemodal-overlay3.active{
+    z-index: 1041;
+}
