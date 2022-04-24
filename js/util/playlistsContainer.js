@@ -9,8 +9,10 @@ export async function containerzarPlaylists(jogos, especifico) {
         );
         div.classList.add("rbxm-list-game");
 
-        const universo = await (await fetch(`https://robloxpromocodemaster-api.herokuapp.com/robloxapis/getUniverse/${jogo}`)).json();
-        fetch(`https://thumbnails.roblox.com/v1/games/icons/?universeIds=${universo.id}&size=512x512&format=png`)
+        const {
+            universes: [universo],
+        } = await (await fetch(`https://robloxpromocodemaster-api.herokuapp.com/robloxapis/getUniverse/${jogo}`)).json();
+        fetch(`https://thumbnails.roblox.com/v1/games/icons/?universeIds=${universo}&size=512x512&format=png`)
             .then(res => res.json())
             .then(data => {
                 data = data.data[0];
@@ -21,7 +23,7 @@ export async function containerzarPlaylists(jogos, especifico) {
             });
         // console.log(universo);
 
-        fetch(`https://games.roblox.com/v1/games?universeIds=${universo.id}`)
+        fetch(`https://games.roblox.com/v1/games?universeIds=${universo}`)
             .then(res => res.json())
             .then(data => {
                 const infoJogo = data.data[0];

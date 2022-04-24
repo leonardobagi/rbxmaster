@@ -5,7 +5,7 @@ if (usp.has("rbxmPlaylists")) {
         const { containerzarPlaylists } = await import("../util/playlistsContainer.js");
 
         // conseguir playlists do banco de dados
-        const playlists = (await chrome.storage.sync.get("playlists")).playlists;
+        const playlists = (await chrome.storage.sync.get("playlists")).playlists || [];
         await waitForEl("#listas");
 
         // loop pelas playlists
@@ -49,6 +49,7 @@ if (usp.has("rbxmPlaylists")) {
             const formData = new FormData(document.querySelector("form#addPlaylist"));
             const data = Object.fromEntries(formData);
 
+            if (playlists.some(playlist => playlist.nome == data.nomePlaylist)) return alert("Já existe uma playlist com este nome!");
             playlists.push({
                 nome: data.nomePlaylist,
                 descricao: data.descricaoPlaylist,
@@ -110,6 +111,7 @@ if (usp.has("rbxmPlaylists")) {
                     };
                     const formData = new FormData(document.getElementById("editarPlaylist"));
                     const data = Object.fromEntries(formData);
+                    if (playlists.some(list => list.nome == data.nome)) return alert("Já existe uma playlist com este nome!");
 
                     const playlist = playlists.find(e => e.nome == playlistDatas.nome);
 
